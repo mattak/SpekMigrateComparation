@@ -7,15 +7,14 @@ def generate(outputDirectory, i)
   content = <<__FILE__
 package me.mattak.spekmigratecomparation.generate
 
+import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
-import org.junit.Test
 
-class #{name} {
-    @Test
-    fun addition_isCorrect() {
+class #{name} : ShouldSpec({
+    should("addition is correct") {
         (2+2) shouldBe 4
     }
-}
+})
 __FILE__
   filepath = "#{outputDirectory}/#{name}.kt"
   File.write(filepath, content)

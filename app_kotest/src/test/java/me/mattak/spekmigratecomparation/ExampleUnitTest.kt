@@ -1,11 +1,10 @@
 package me.mattak.spekmigratecomparation
 
+import io.kotest.core.spec.style.ShouldSpec
 import io.kotest.matchers.shouldBe
-import org.junit.Test
 
-class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
+class ExampleUnitTest : ShouldSpec({
+    should("addition is correct") {
         (2+2) shouldBe 4
     }
-}
+})
