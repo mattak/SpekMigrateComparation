@@ -11,8 +11,7 @@ Comparation of test files vs time to run tests with JUnit, Kotest and Spek.
 | 512       | 10.781      | 27.67        | 15.43      |
 | 1024      | 14.242      | 35.994       | 23.225     |
 
-<img src="https://user-images.githubusercontent.com/522828/223314267-3832dcac-3fb8-4ab2-af4f-97f8b9d1b6e0.png" alt="test result" width="480" />
-
+<img src="https://user-images.githubusercontent.com/522828/223317899-894a19bb-2938-4655-a7b3-59e1fba5723a.png" alt="test result" width="480" />
 
 # How to run
 
