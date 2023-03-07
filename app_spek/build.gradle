@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'de.mannodermaus.android-junit5' version '1.8.2.1' apply true
 }
 
 android {
@@ -44,6 +45,18 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    testOptions {
+        junitPlatform {
+            filters {
+                engines {
+                    include 'spek2'
+                }
+            }
+        }
+        unitTests.all {
+            testLogging.events = ["passed", "skipped", "failed"]
+        }
+    }
 }
 
 dependencies {
@@ -58,6 +71,10 @@ dependencies {
 //    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 //    androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
+    // spek
+    testImplementation "org.spekframework.spek2:spek-dsl-jvm:2.0.19"
+    testImplementation "org.spekframework.spek2:spek-runner-junit5:2.0.19"
+//    testImplementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"

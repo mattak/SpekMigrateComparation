@@ -13,4 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "SpekMigrateComparation"
-include ':app'
+//include ':app'
+//include ':app_kotest'
+include ':app_spek'
